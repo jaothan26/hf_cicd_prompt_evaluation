@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        HF_SPACE_URL = "https://huggingface.co/spaces/jaothan/cicd_evaluation_prompt"
+        HF_SPACE_URL = "https://huggingface.co/spaces/YourUsername/YourSpaceName"
     }
     stages {
         stage('Setup Environment') {
@@ -30,8 +30,8 @@ pipeline {
             steps {
                 echo "🚀 Deploying to Hugging Face Spaces..."
                 sh '''
-                git config --global user.email "joathan26@gmail.om"
-                git config --global user.name "jaothan"
+                git config --global user.email "you@example.com"
+                git config --global user.name "Your Name"
                 git remote add huggingface ${HF_SPACE_URL}
                 git push huggingface main
                 '''

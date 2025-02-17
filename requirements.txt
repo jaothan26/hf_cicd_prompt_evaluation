@@ -1,0 +1,8 @@
+streamlit
+transformers
+torch
+datasets
+evaluate
+rouge_score
+absl-py
+nltk
